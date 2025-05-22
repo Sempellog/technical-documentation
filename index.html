@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css"></link>
+  <title>Technical Documentation Page</title>
+</head>
+ <body>
+   <fieldset class="side-box">
+   <nav id="navbar">
+    <header class="sidebar">HTML & CSS Guide</header>
+    <div><a class="nav-link" href="#introduction">Introduction</a></div>
+    <div><a class="nav-link" href="#structure">Structure</a></div>
+    <div><a class="nav-link" href="#forms_and_input_in_html">Forms and Input in Html</a></div>
+    <div><a class="nav-link" href="#css_basics">CSS Basics</a></div>
+    <div><a class="nav-link" href="#layout_with_flexbox">Layout With flexbox</a></div>
+    <div><a class="nav-link" href="#responsive_design">Responsive Design</a></div>
+    <div><a class="nav-link" href="#conclusion">Conclusion</a></div>
+     </nav>
+   </fieldset>
+  <main id="main-doc">
+    <section id="introduction" class="main-section">
+     <header class="first">Introduction</header>
+      <h1>What is HTML?</h1>
+       <p>HTML stands for HyperText Markup Language. It is the standard language used to create and structure content on the web.</p>
+       <h2>What Does HTML Do?</h2>
+        <p>HTML is used to:</p>
+        <ul>
+          <li>Structure content with elements like headings, paragraphs, lists, images, links, and more.</li>
+          <li>Define the meaning and layout of web content.</li>
+          <li>Work together with CSS (for styling) and JavaScript (for interactivity).</li>
+        </ul>
+       <h3>Basic HTML Example</h3>
+         <fieldset class="code-example">
+          <code><pre>
+<p>&lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+     &lt;head&gt;
+       &lt;title&gt;My First Webpage&lt;/title&gt;
+     &lt;/head&gt;
+        &lt;body&gt;
+           &lt;h1&gt;Hello, World!&lt;/h1&gt;
+             &lt;p&gt;This is my first HTML page.&lt;/p&gt;
+        &lt;/body&gt;
+  &lt;/html&gt;</p>
+           </code></pre>
+         </fieldset>
+       <h4>Key Components Of HTML</h4>
+           <table class="example-table">
+             <thead>
+               <tr><th>Elements</th><th>Description</th></tr>
+             </thead>
+             <tbody>
+               <tr><td>&lt;!DOCTYPE html&gt;</td><td>Declares the document type</td></tr>
+               <tr><td>&lt;html&gt;</td><td>Root element of an HTML page</td></tr>
+               <tr><td>&lt;head&gt;</td><td>Contains meta-information (title,links,etc.)</td></tr>
+               <tr><td>&lt;body&gt;</td><td>Contains the visible content</td></tr>
+               <tr><td>&lt;h1&gt;,&lt;p&gt;,&lt;a&gt;</td><td class="break">Elements to add headings,paragraphs,links,etc</td></tr>
+             </tbody>
+           </table>
+    </section>
+    <section id="structure" class="main-section">
+      <header>Structure</header>
+        <h1>Basic HTML Structure</h1>
+          <p>HTML documents follow a specific structure that browsers understand. This structure ensures that content is well-organized and displayed correctly.</p>
+        <h2>HTML Boilerplate Example</h2>
+          <fieldset class="code-example">
+            <pre><code>
+<p">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &LT;meta name="viewport" 
+    content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;This is a heading&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p>&GT;
+  &lt;/body&gt;
+&lt;/html&gt;</p>
+            </code></pre>
+          </fieldset>
+    
+      <h3>Breakdown Of Each Part</h3>
+        <table>
+             <thead>
+               <tr><th>Tags</th><th>Purpose</th></tr>
+             </thead>
+             <tbody>
+               <tr><td><code>&lt;!DOCTYPE html&gt;</code></td><td>Tells the browser this is an HTML5 document.</td></tr>
+               <tr><td><code>&lt;html lang="en"&gt;</code></td><td>Root of the document, <code>&lt;lang="en"&gt;</code> specifies the language.</td></tr>
+               <tr><td><code>&lt;head&gt;</code></td><td>Contains meta info: title, encoding, etc. (not visible to users).</td></tr>
+               <tr><td><code>&lt;meta charset="utf-8&gt;</code></td><td>Sets the character encoding (supports most characters).</td></tr>
+               <tr><td><code>&lt;meta name="viewport" content="width=device-width, initial scale=1.0&gt;</code></td><td>Makes site mobile-responsivec</td></tr>
+               <tr><td><code>&lt;title&gt;</code></td><td>Sets the page title shown on the browser tab.</td></tr>
+               <tr><td><code>&lt;body&gt;</code></td><td>Contains visible content like text, images, buttons, etc.</td></tr>
+             </tbody>
+           </table>
+    </section>
+    <section id="forms_and_input_in_html" class="main-section">
+      <header>Forms and Input in HTML</header>
+        <h1>Basic Form Structure</h1>
+          <fieldset class="code-example">
+            <pre><code>
+           <p> &lt;form action="/submit-form" method="POST"&gt;
+  &lt;label for="name">Name:&lt;/labe&gt;
+  &lt;input type="text" id="name" name="name" required /&gt;
+
+  &lt;label for="email">Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required /&gt;
+
+  &lt;label for="age">Age:&lt;/label&gt;
+  &lt;input type="number" id="age" 
+  name="age" min="1" max="120" /&gt;
+
+  &lt;button type="submit">Submit&lt;/button&gt;
+&lt;/form&gt;</p>
+             </pre></code>
+          </fieldset>
+        <h2>Common Input Types</h2>
+          <p class="co-code"><code>
+          &lt;text&gt;
+          </code></p>
+          <p class="co-text">Used for single-line text input fields.</p>
+          <p class="co-code"><code>&lt;email&gt;
+          </code>
+          </p>
+          <p class="co-text">Validates that the input is in email format.</p>
+          <p class="co-code"><code>&lt;number&gt;</p></code>
+          <p class="co-text">Allows only numeric input. Can include &lt;min&gt; and &lt;max&gt;.</p>
+          <p class="co-code"><code>&lt;radio&gt;
+          </code>
+          </p>
+          <p class="co-text">Lets the user select one option from a group.</p>
+          <p class="co-code"><code>&lt;checkbox&gt;
+          </code>
+          </p>
+          <p class="co-text">Allows the user to select multiple options.</p>
+          <p class="co-code"><code>&lt;password&gt;
+          </code>
+          </p>
+          <p class="co-text">Hides typed characters for privacy.</p>
+          <p class="co-code"><code>&lt;submit&gt;
+          </code>
+          </p>
+          <p class="co-text">Submits the form to the server.</p>
+    </section>
+    <section id="css_basics" class="main-section">
+      <header>CSS Basics</header>
+      <p>CSS (Cascading Style Sheets) is used to control the appearance and layout of HTML elements. It separates content (HTML) from design (CSS), allowing for more flexible and maintainable code.</p>
+      
+      <h1>What CSS Controls:</h1>
+        <ul>
+          <li>Fonts and text styles</li>
+          <li>Colors and backgrounds</li>
+          <li>Spacing (margins, padding)</li>
+          <li>Element positioning and layout</li>
+          <li>Animations and transitions</li>
+          <li>Responsive design</li>
+        </ul>
+        
+     <h2>Ways To Apply CSS:</h2>
+       <p>1. Inline - inside the HTML element using the &lt;style&gt; attribute</p>
+          <fieldset class="code-example">
+            <p><code>&lt;p <span class="color-red">style</span>=<span class="color-green">"color: blue;"</span>&gt;This is blue text.&lt;/p&gt;</code></p>
+          </fieldset>
+       <p>2. Internal - within a &lt;style&gt; tag inside the &lt;head&gt; of your HTML</p>
+         <fieldset class="code-example">
+           <code><pre>
+           &lt;style&gt;
+              p {
+                <span class="color-green">Color</span>: <span class="color-red">green</span>;
+              }
+           &lt;/style&gt;
+            </code></pre>
+         </fieldset>
+     <p>3. External - using a separate <span class="color-black">.css</span> file linked with <span class="color-black">&lt;link&gt;</span></p>
+       <fieldset class="code-example"
+     <p><code>
+       &lt;link <span class="color-red">rel</span>=<span class="color-green">"stylesheet"</span> <span class="color-red">href</span>=<span class="color-green">"styles.css"</span> /&gt;
+     </code></p>
+        </fieldset>
+        
+   <h3>CSS Syntax:</h3>
+     <fieldset class="code-example">
+       <code><p>selector {</p>
+         <p>property: value;</p>
+.        <p>}</p></code>
+     </fieldset>
+     <p>Example:</p>
+     <fieldset class="code-example">
+        <code>
+          <p>h1 {</p>
+           <p> <span class="color-red">color</span>:<span class="color-green"> red</span>;</p>
+            <p><span class="color-red">font-size</span>: <span class="color-green">32px</span>;</p>
+           <p>}</p>
+        </code>
+      </fieldset>
+     
+   <h4>Common Selectors:</h4>
+     <ul>
+       <li><span class="color-black">element</span> - targets by tag (e.g. <span class="color-black">p</span>, <span class="color-black">div</span>)</li>
+       <li><span class="color-black">.class</span> - targets by class name (e.g.   <span class="color-black">.box</span>)</li>
+       <li><span class="color-black">#id</span>   - targets by ID (e.g.<span class="color-black">#header</span>)</li>
+     </ul>
+  
+  <h5>Box Model:</h5>
+    <fieldset class="margin"><p>Margin</p>
+      <fieldset class="border"><p>Border</p>
+        <fieldset class="padding"><p>Padding</p>
+          <fieldset class="content"><p>Content</p>
+            
+          </fieldset>
+        </fieldset>
+      </fieldset>
+    </fieldset>
+    
+    <h6>Common Properties</h6>
+     <table class="common-prop">
+             <thead>
+               <tr><th>Property</th><th>What it does</th></tr>
+             </thead>
+             <tbody>
+               <tr><td class="prop">color</td><td>Text color</td></tr>
+               <tr><td class="prop">background</td><td>Background color/image</td></tr>
+               <tr><td class="prop">font-size</td><td>Size of text</td></tr>
+               <tr><td class="prop">margin</td><td>Space outside the element</td></tr>
+               <tr><td class="prop">padding</td><td>Space inside the element</td></tr>
+               <tr><td class="prop">border</td><td>Element border</td></tr>
+               <tr><td class="prop">display</td><td>Block, inline, flex, etc.</td></tr>
+               <tr><td class="prop">position</td><td>Static, relative, absolute</td></tr>
+               <tr><td class="prop">width/weight</td><td>Dimensions</td></tr>
+             </tbody>
+           </table>
+   </section>
+   <section id="layout_with_flexbox" class="main-section">
+     <header>Layout with Flexbox</header>
+       <p>Flexbox (Flexible Box Layout) is a CSS layout module designed to make it easier to design flexible and responsive layout structures without using floats or positioning hacks.</p>
+       
+       <h1>Why Use Flexbox?</h1>
+         <p>Flexbox simplifies aligning elements, distributing space, and adapting to different screen sizes.</p>
+         
+       <h2>Enabling Flexbox:</h2>
+         <p>Apply <span class="color-black">display: flex</span> to a container to turn its children into flex items</p>
+           <fieldset class="code-example">
+             <p><code>.container {</p>
+             <p><span class="color-red">display</span>:<span class="color-green"> flex</span>;</p>
+             <p>}</code></p>
+           </fieldset>
+         
+       <h3>Key Concepts:</h3>
+         <p>1. Main Axis & Cross Axis</p>
+           <ul>
+             <li><span class="bold">Main Axis:</span> The direction items are laid out (default is horizontal).</li>
+             <li><span class="bold">Cross Axis:</span> Perpendicular to the main axis</li>
+           </ul>
+         
+       <h4>Flex Container Properties</h4>
+         <p>1. <span class="color-black">flex-direction</span></p>
+           <p class="space">Defines the direction of the main axis</p>
+             <p class="space"><span class="bold">Values:</span></p>
+             <ul>
+               <li><span class="color-black">row</span> (default): Items arranged horizontally</li>
+               <li><span class="color-black">row-reverse</span>: Items arranged in reverse horizontal order</li>
+               <li><span class="color-black">column</span>: Items arranged vertically</li>
+               <li><span class="color-black">column-reverse</span>: Items arranged in reverse vertical order</li>
+             </ul>
+           
+           <p>2. <span class="color-black">justify-content</span></p>
+             <p class="space">Aligns items along the main axis (horizontal by default).</p>
+             <p class="space"><span class="bold">Common Values:</span></p>
+             <ul>
+               <li><span class="color-black">flex-start</span>: Items align to the start</li>
+               <li><span class="color-black">center</span>: Items center along the main axis</li>
+               <li><span class="color-black">flex-end</span>: Items align to the end</li>
+               <li><span class="color-black">space-between</span>: Equal spacing between items</li>
+               <li><span class="color-black">space-around</span>: Equal spacing around items</li>
+               <li><span class="color-black">space-evenly</span>: Equal spacing between and around</li>
+             </ul>
+             
+             <p>3. <span class="color-black">align-items</span></p>
+             <p class="space">Aligns items along the cross axis (vertical by default).</p>
+             <p class="space"><span class="bold">Common Values:</span></p>
+             <ul>
+               <li><span class="color-black">stretch</span>(default): Items stretch to fill the container</li>
+               <li><span class="color-black">flex-start</span>: Items align to the top</li>
+               <li><span class="color-black">center</span>: Items vertically centered</li>
+               <li><span class="color-black">flex-end</span>: Items align to the bottom</li>
+               <li><span class="color-black">baseline</span>: Aligns items based on text baseline</li>
+             </ul>
+             
+             <p>4. <span class="color-black">flex-wrap</span></p>
+             <p class="space">Controls whether items stay on one line or wrap to multiple lines.</p>
+             <p class="space"><span class="bold">Values:</span></p>
+             <ul>
+               <li><span class="color-black">stretch</span>(default): Items stretch to fill the container</li>
+               <li><span class="color-black">nowrap</span>(default): All items on one line</li>
+               <li><span class="color-black">wrap</span>: Items wrap onto multiple lines</li>
+               <li><span class="color-black">wrap-reverse</span>: Wraps in reverse direction</li>
+               </ul>
+               
+               <p>5. <span class="color-black">align-content</span></p>
+             <p class="space">Aligns a flex containers lines when there is extra space in the cross axis (only applies with multiple lines).</p>
+             <p class="space"><span class="bold">Common Values:</span></p>
+             <ul>
+               <li><span class="color-black">flex-start</span></li>
+               <li><span class="color-black">center</span></li>
+               <li><span class="color-black">flex-end</span></li>
+               <li><span class="color-black">stretch</span>(default)</li>
+               </ul>
+               
+       <h5>Example Structure:</h5>
+         <p class="space"><span class="color-black">html</span></p>
+         <fieldset class="code-example">
+           <code>
+           <p class="space">&lt;div <span class="color-red">class</span>=<span class="color-green">"container"</span>&gt;</p>
+            <p class="space-left">&lt;div <span class="color-red">class</span>=<span class="color-green">"item"</span>&gt;Box 1&lt;/div&gt;</p>
+            <p class="space-left">&lt;div <span class="color-red">class</span>=<span class="color-green">"item"</span>&gt;Box 2&lt;/div&gt;</p>
+            <p class="space-left">&lt;div <span class="color-red">class</span>=<span class="color-green">"item"</span>&gt;Box 3&lt;/div&gt;</p>
+           <p class="space">&lt;/div&gt;</p>
+           </code>
+         </fieldset>
+         <p class="space"><span class="color-black">CSS</span></p>
+         <fieldset class="code-example">
+           <code>
+           <p class="space"><span class="color-red">.container</span> {</p>
+            <p class="space-left"><span class="color-green">display</span>: flex;</p>
+            <p class="space-left"><span class="color-green">justify-content</span>: space-between;</p>
+            <p class="space-left"><span class="color-green">align-items</span>: center;</p>
+            <p class="space">}</p>
+            </code>
+         </fieldset>
+   </section>
+   <section id="responsive_design" class="main-section">
+     <header>Responsive Design</header>
+       <h1>What is Responsive Design?</h1>
+        <p>Responsive Design is a web design approach that ensures a website looks good and functions well on all screen sizes from large desktop monitors to small smartphone screens.</p>
+        
+       <h2>Why is it important?</h2>
+         <ul>
+           <li>Improves <span class="bold">user experience</span> across devices</li>
+           <li>Increases <span class="bold">mobile traffic</span></li>
+           <li>Enhances <span class="bold">SEO</span> (Google favors mobile-friendly sites)</li>
+           <li>Future-proofs your website for new devices</li>
+         </ul>
+       
+       <h3>Key Techniques</h3>
+         <p><span class="bold">1. Media Queries</span></p>
+         <p>CSS feature used to apply styles based on screen size.</p>
+         <p><span class="color-black">CSS</span></p>
+           <fieldset class="code-example">
+             <code>
+            <p><span class="color-blue">@media</span> (<span class="color-green">max-width</span>: <span class="color-red">600px</span>) {</p>
+              <p class="space-left-a">body {</p>
+              <p class="space-left"><span class="color-green">background-color</span>: lightblue;</p>
+              <p class="space">}</p>
+               </code>
+           </fieldset>
+         <p class="space">This example changes the background color on screens 600px or smaller.</p>
+         
+         <p><span class="bold">2. Fluid Layout</span></p>
+         <p class="space">Use relative units like <span class="color-black">%</span>, <span class="color-black">em</span>, <span class="color-black">rem</span>, or <span class="color-black">vw/vh</span> instead of fixed units like <span class="color-black">px</span></p>
+         
+         <p><span class="color-black">CSS</span></p>
+           <fieldset class="code-example">
+             <code>
+             <p><span class="color-red">.container</span> {</p>
+             <p class="space-left"><span class="color-green">width</span>: <span class="color-red">80%</span>; <span class="color-grey">/* instead of 800px */</span></p>
+             <p>}</p>
+             </code>
+           </fieldset>
+         
+         <p><span class="bold">3. Flexible Images</span></p>
+         <p class="space">Make images scale with the screen.</p>
+           <p><span class="color-black">CSS</span></p>
+             <fieldset class="code-example">
+               <code>
+              <p>img {</p>
+                 <p class="space-left"><span class="color-green">max-width</span>: <span class="color-red">100%</span>;</p>
+                 <p class="space-left"><span class="color-green">height</span>: auto;</p>
+              <p>}</p>
+               </code>
+             </fieldset>
+             
+            <p><span class="bold">4. Mobile-First Design</span></p>
+         <p class="space">Make images scale with the screen.</p>
+           <p><span class="color-black">CSS</span></p>
+             <fieldset class="code-example">
+               <code>
+              <p><span class="color-grey">/* Mobile first */</span></p>
+              <p>body {</p>
+                 <p class="space-left"><span class="color-green">font-size</span>: <span class="color-red">16px</span>;</p>
+                 <p><span class="color-grey">/* Larger screens */</span></p>
+                 <p><span class="color-blue">@media </span><span class="color-green">(min-width</span>: <span class="color-red">768px)</span>{</p>
+                 <p class="space-left-a">body {</p>
+                 <p class="space-left"><span class="color-green">font-size</span>: <span class="color-red">18px</span>;</p>
+              <p>}</p>
+               </code>
+             </fieldset>
+           <p><span class="bold">5. Viewport Meta Tag</span></p>
+         <p class="space">Ensures the browser knows how to scale the page on mobile devices.</p>
+           <p><span class="color-black">html</span></p>
+             <fieldset class="code-example">
+               <code>
+                 <p class="space-">&lt;meta <span class="color-red">name</span>=<span class="color-green">"viewport" </span><span class="color-red">content</span>=<span class="color-green">"width=device-width, initial-scale=1.0"</span>&gt;</p>
+               </code>
+   </section>
+   <section id="conclusion" class="main-section">
+     <header>Conclusion</header>
+      <p>In this guide, we've explored the foundational aspects of HTML and CSS, including how to structure web content and style it for responsiveness. Understanding these core technologies is essential for any aspiring web developer.</p>
+      <p>By mastering HTML elements, forms, layout systems like Flexbox, and responsive design principles, you're well on your way to building modern, accessible, and user-friendly websites. This knowledge sets the stage for deeper learning in JavaScript, frameworks, and full-stack development.</p>
+      <p class="last"><span class="bold">Keep practicing, keep building, every line of code brings you closer to becoming a proficient web developer.</span></p>
+   </section>  
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+  
+    
+  </main>
+</body>
+
+</html>
+
